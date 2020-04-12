@@ -2,9 +2,114 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>TOTALLY MEDIOCRE JAVASCRIPT SUDOKU SOLVING PROGRAM 9000</title>
+        <title>TOTALY MEDIOCRE JAVASCRIPT SUDOKU SOLVING PROGRAM 9001</title>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <!--Grid layout in HTMl w/ CSS-->
+        <div class="imageContainer" id="grid">
+            <div id="row1">
+                <input id="A1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  5px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="B1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="C1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="D1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="E1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="F1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="G1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="H1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 5px; font-size: 60pt; text-align: center;">
+                <input id="I1" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 5px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row2">
+                <input id="A2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  5px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="B2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="C2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="D2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="E2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="F2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="G2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="H2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 105px; font-size: 60pt; text-align: center;">
+                <input id="I2" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 105px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row3">
+                <input id="A3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="B3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="C3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="D3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="E3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="F3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="G3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="H3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 205px; font-size: 60pt; text-align: center;">
+                <input id="I3" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 205px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row4">
+                <input id="A4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="B4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="C4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="D4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="E4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="F4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="G4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="H4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 305px; font-size: 60pt; text-align: center;">
+                <input id="I4" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 305px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row5">
+                <input id="A5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="B5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="C5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="D5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="E5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="F5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="G5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="H5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 405px; font-size: 60pt; text-align: center;">
+                <input id="I5" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 405px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row6">
+                <input id="A6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="B6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="C6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="D6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="E6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="F6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="G6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="H6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 505px; font-size: 60pt; text-align: center;">
+                <input id="I6" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 505px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row7">
+                <input id="A7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="B7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="C7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="D7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="E7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="F7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="G7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="H7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 605px; font-size: 60pt; text-align: center;">
+                <input id="I7" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 605px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row8">
+                <input id="A8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="B8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="C8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="D8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="E8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="F8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="G8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="H8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 705px; font-size: 60pt; text-align: center;">
+                <input id="I8" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 705px; font-size: 60pt; text-align: center;">
+            </div>
+            <div id="row9">
+                <input id="A9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  005px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="B9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  105px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="C9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  205px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="D9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  305px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="E9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  405px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="F9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  505px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="G9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  605px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="H9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  705px; top: 803px; font-size: 60pt; text-align: center;">
+                <input id="I9" maxlength="1" style="height: 90px; width=90px; max-width: 90px; max-height: 90px; border: 0px; position: absolute; left:  805px; top: 803px; font-size: 60pt; text-align: center;">
+            </div>
+        </div>
+        <button onclick="begin()" style="height: 80px; width: 200px; font-size: 28pt; position: relative; top: 50px; left: 350px;">Solve!</button>
         <script src="trial1.js"></script>
+        <div class="footer"></div>
     </body>
 </html>
