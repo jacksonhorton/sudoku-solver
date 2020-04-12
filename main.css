@@ -8,19 +8,14 @@ body {
     margin: 0px;
 }
 
-.field {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    /*transform: scale(2, 5);*/
-}
-
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #CBCBCB;
-  color: black;
-  text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #CBCBCB;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 125%;
 }
